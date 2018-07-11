@@ -1,0 +1,81 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Django Blog</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" >
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+    </div>
+  </nav>
+  <br/>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="jumbotron">
+          <h1>Welcome to My Blog</h1>
+          <p class="lead">Thank you for visiting.</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-8">
+        <div class="post">
+          <h3>Post Title</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+           esse cillum dolore eu fugiat nulla pariatur.</p>
+           <a href="#" class="btn btn-primary">Read More</a>
+        </div>
+
+        <hr/>
+
+        <div class="post">
+          <h3>Post Title</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+           esse cillum dolore eu fugiat nulla pariatur.</p>
+           <a href="#" class="btn btn-primary">Read More</a>
+        </div>
+
+        <hr/>
+
+        <div class="post">
+          <h3>Post Title</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+           esse cillum dolore eu fugiat nulla pariatur.</p>
+           <a href="#" class="btn btn-primary">Read More</a>
+        </div>
+
+        <hr/>
+
+        <div class="post">
+          <h3>Post Title</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+           esse cillum dolore eu fugiat nulla pariatur.</p>
+           <a href="#" class="btn btn-primary">Read More</a>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-md-offset1">
+        <h2>Sidebar</h2>
+      </div>
+    </div>
+  </div>
+{% endblock %}
