@@ -1,0 +1,16 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<div class="container">
+  <br/>
+  <div class="post_detail">
+    <h3>{{ post.title }}</h3>
+    <hr/>
+    <label>created</label>
+    <h5>{{ post.created|date:'D M Y H:i' }}</h5>
+    <label>last modified</label>
+    <h5>{{ post.modified|date:'D M Y H:i' }}</h5>
+    <br/>
+    <p>{{ post.body }}</p>
+  </div>
+</div>
+{% endblock %}

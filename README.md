@@ -1,3 +1,5 @@
 # blogsite
 
-![](screenshots/template-1.png?raw=true)
+![](screenshots/index.png?raw=true)
+
+![](screenshots/post_details.png?raw=true)

@@ -7,6 +7,7 @@ class Post(models.Model):
     slug = models.SlugField()
     body = models.TextField()
     created = models.DateTimeField(auto_now_add=True)
-
+    modified = models.DateTimeField(auto_now=True)
+    
     def __str__(self):
         return self.title
