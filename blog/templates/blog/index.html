@@ -19,6 +19,12 @@
           </li>
         </ul>
     </div>
+    {% if request.user.is_authenticated %}
+          <div class="col-md-1">{{ request.user }}</div>
+          <a href="{% url 'logout' %}" class="btn btn-primary">Logout</a>
+      {% else %}
+    <a href="{% url 'login' %}" class="btn btn-outline-primary">Login</a>
+      {% endif %}
   </nav>
   <br/>
   <div class="container">
