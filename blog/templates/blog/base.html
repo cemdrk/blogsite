@@ -4,12 +4,14 @@
   <head>
     <meta charset="utf-8">
     <title>Django Blog</title>
+    <link rel="stylesheet" href="{% static 'blog/css/bootstrap.min.css' %}" />
     <link rel="stylesheet" href="{% static 'blog/css/styles.css' %}" />
-    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css'%}"/>
   </head>
   <body>
     {% block content %}
     {% endblock%}
-    <script type="text/javascript" src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+    <script src="{% static 'blog/js/jquery-3.3.1.slim.min.js' %}"></script>
+    <script src="{% static 'blog/js/popper.min.js' %}"></script>
+    <script src="{% static 'blog/js/bootstrap.min.js' %}"></script>
   </body>
 </html>
