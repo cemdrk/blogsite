@@ -8,9 +8,11 @@ def home(request):
     posts = Post.objects.order_by('created')
     return render(request, 'blog/home.html', {'posts': posts})
 
+
 def post_details(request, slug):
-    post = get_object_or_404(Post, slug= slug)
+    post = get_object_or_404(Post, slug=slug)
     return render(request, 'blog/post_details.html', {'post': post})
+
 
 def post_create(request):
     if request.user.is_authenticated:
@@ -23,6 +25,7 @@ def post_create(request):
         return render(request, 'blog/post_create.html', context)
     else:
         return HttpResponseRedirect('/login')
+
 
 def post_delete(request, id):
     post = Post.objects.get(id=id)
