@@ -4,6 +4,7 @@ from .views import (
     PostDetailAPIView,
     PostUpdateAPIView,
     PostDeleteAPIView,
+    PostCreateAPIView,
 )
 
 
@@ -12,4 +13,5 @@ urlpatterns = [
     path('<int:pk>', PostDetailAPIView.as_view(), name='detail'),
     path('<int:pk>/edit/', PostUpdateAPIView.as_view(), name='update'),
     path('<int:pk>/delete/', PostDeleteAPIView.as_view(), name='delete'),
+    path('create/', PostCreateAPIView.as_view(), name='create'),
 ]
