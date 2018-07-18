@@ -11,11 +11,13 @@ from .serializers import (
     PostDetailSerializer,
     PostCreateSerializer,
 )
+from rest_framework.permissions import IsAuthenticated
 
 
 class PostCreateAPIView(CreateAPIView):
     queryset = Post.objects.all()
     serializer_class = PostCreateSerializer
+    permission_classes = [IsAuthenticated]
 
 
 class PostListAPIView(ListAPIView):
@@ -31,8 +33,10 @@ class PostDetailAPIView(RetrieveAPIView):
 class PostDeleteAPIView(DestroyAPIView):
     queryset = Post.objects.all()
     serializer_class = PostDetailSerializer
+    permission_classes = [IsAuthenticated]
 
 
 class PostUpdateAPIView(RetrieveUpdateAPIView):
     queryset = Post.objects.all()
     serializer_class = PostDetailSerializer
+    permission_classes = [IsAuthenticated]
