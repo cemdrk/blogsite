@@ -12,6 +12,7 @@ from .serializers import (
     PostCreateSerializer,
 )
 from rest_framework.permissions import IsAuthenticated
+from rest_framework.filters import SearchFilter
 
 
 class PostCreateAPIView(CreateAPIView):
@@ -23,6 +24,8 @@ class PostCreateAPIView(CreateAPIView):
 class PostListAPIView(ListAPIView):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
+    filter_backends = [SearchFilter]
+    search_fields = ['title', 'body']
 
 
 class PostDetailAPIView(RetrieveAPIView):
