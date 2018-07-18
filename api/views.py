@@ -2,7 +2,7 @@ from rest_framework.generics import (
     ListAPIView,
     RetrieveAPIView,
     DestroyAPIView,
-    UpdateAPIView,
+    RetrieveUpdateAPIView,
     CreateAPIView,
 )
 from blog.models import Post
@@ -33,6 +33,6 @@ class PostDeleteAPIView(DestroyAPIView):
     serializer_class = PostDetailSerializer
 
 
-class PostUpdateAPIView(UpdateAPIView):
+class PostUpdateAPIView(RetrieveUpdateAPIView):
     queryset = Post.objects.all()
     serializer_class = PostDetailSerializer
